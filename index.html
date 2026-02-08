@@ -10,7 +10,6 @@
     <meta name="description" content="سایت شخصی، رزومه، مهارت‌ها و نمونه‌کارهای زکیه کمالی">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Persian font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
@@ -27,11 +26,6 @@
             color: #ffffff;
             padding: 40px 20px;
             text-align: center;
-        }
-
-        header h1 {
-            margin-bottom: 15px;
-            font-weight: 800;
         }
 
         nav a {
@@ -64,38 +58,56 @@
             font-weight: 700;
         }
 
-        ul {
+        /* ===== Timeline ===== */
+        .timeline {
+            border-right: 3px solid #0ea5e9;
+            padding-right: 25px;
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
             padding-right: 20px;
         }
 
-        /* ===== Skills styles ===== */
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            background: #0ea5e9;
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+
+        /* ===== Skills ===== */
         .skill {
             margin-bottom: 20px;
         }
 
-        .skill span {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-
         .progress {
-            background-color: #e5e7eb;
+            background: #e5e7eb;
             border-radius: 8px;
             overflow: hidden;
         }
 
         .progress-bar {
             background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-            color: #ffffff;
+            color: #fff;
             padding: 6px 10px;
             font-size: 14px;
-            text-align: left;
             border-radius: 8px;
-            width: 0;
         }
 
-        /* ===== Portfolio styles ===== */
+        /* ===== Portfolio ===== */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -106,7 +118,7 @@
             border: 1px solid #e5e7eb;
             border-radius: 12px;
             padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: 0.3s;
         }
 
         .portfolio-card:hover {
@@ -114,48 +126,11 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
-        .portfolio-card h3 {
-            margin-top: 0;
-        }
-
-        .portfolio-card p {
-            color: #374151;
-        }
-
-        .portfolio-card a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #0ea5e9;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .portfolio-card a:hover {
-            text-decoration: underline;
-        }
-
         footer {
             background: #111827;
-            color: #ffffff;
+            color: #fff;
             text-align: center;
             padding: 20px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav a {
-                margin: 8px;
-            }
-
-            main {
-                padding: 20px 15px;
-            }
         }
     </style>
 </head>
@@ -166,7 +141,7 @@
     <h1>سلام، من زکیه کمالی هستم 👋</h1>
     <nav>
         <a href="#resume">رزومه</a>
-        <a href="#about">درباره من</a>
+        <a href="#timeline">سوابق</a>
         <a href="#skills">مهارت‌ها</a>
         <a href="#portfolio">نمونه‌کار</a>
         <a href="#blog">وبلاگ</a>
@@ -175,100 +150,65 @@
 
 <main>
 
-    <section id="resume">
-        <h2>رزومه</h2>
-        <p>
-            من علاقه‌مند به فناوری و توسعه وب هستم و تمرکز من بر
-            ساخت وب‌سایت‌های مدرن، بهینه و کاربرپسند است.
-        </p>
+<section id="resume">
+    <h2>رزومه</h2>
+    <p>دانشجوی مهندسی کامپیوتر و علاقه‌مند به توسعه وب و طراحی رابط کاربری</p>
+</section>
 
-        <h3>حوزه‌های تخصصی</h3>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Responsive Web Design</li>
-            <li>Git & GitHub</li>
-            <li>SEO Basics</li>
-        </ul>
-    </section>
+<section id="timeline">
+    <h2>سوابق تحصیلی و شغلی</h2>
 
-    <section id="about">
-        <h2>درباره من</h2>
-        <p>
-            این وب‌سایت به‌عنوان فضای شخصی من برای معرفی توانمندی‌ها،
-            اشتراک تجربه‌ها و ارائه نمونه‌کارها طراحی شده است.
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>مهارت‌ها</h2>
-
-        <div class="skill">
-            <span>HTML / CSS</span>
-            <div class="progress">
-                <div class="progress-bar" style="width:90%;">90%</div>
-            </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">۱۴۰۲ - تاکنون</div>
+            <h3>توسعه‌دهنده وب (Freelance)</h3>
+            <p>طراحی سایت‌های شخصی با HTML، CSS و GitHub Pages</p>
         </div>
 
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="progress">
-                <div class="progress-bar" style="width:65%;">65%</div>
-            </div>
+        <div class="timeline-item">
+            <div class="timeline-date">۱۴۰۰ - تاکنون</div>
+            <h3>دانشجوی مهندسی کامپیوتر</h3>
+            <p>تمرکز بر برنامه‌نویسی و توسعه وب</p>
         </div>
+    </div>
+</section>
 
-        <div class="skill">
-            <span>Git & GitHub</span>
-            <div class="progress">
-                <div class="progress-bar" style="width:70%;">70%</div>
-            </div>
+<section id="skills">
+    <h2>مهارت‌ها</h2>
+
+    <div class="skill">
+        HTML / CSS
+        <div class="progress"><div class="progress-bar" style="width:90%">90%</div></div>
+    </div>
+
+    <div class="skill">
+        JavaScript
+        <div class="progress"><div class="progress-bar" style="width:65%">65%</div></div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>نمونه‌کارها</h2>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-card">
+            <h3>سایت شخصی</h3>
+            <a href="https://zkamali276-ops.github.io/" target="_blank">مشاهده</a>
         </div>
+    </div>
+</section>
 
-        <div class="skill">
-            <span>UI / UX</span>
-            <div class="progress">
-                <div class="progress-bar" style="width:60%;">60%</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <h2>نمونه‌کارها</h2>
-
-        <div class="portfolio-grid">
-
-            <div class="portfolio-card">
-                <h3>سایت شخصی</h3>
-                <p>طراحی و پیاده‌سازی سایت شخصی با HTML و CSS و GitHub Pages</p>
-                <a href="https://zkamali276-ops.github.io/" target="_blank">مشاهده پروژه</a>
-            </div>
-
-            <div class="portfolio-card">
-                <h3>صفحه فرود (Landing Page)</h3>
-                <p>طراحی صفحه فرود واکنش‌گرا با تمرکز بر طراحی رابط کاربری و تجربه کاربری</p>
-                <a href="#" target="_blank">مشاهده پروژه</a>
-            </div>
-
-            <div class="portfolio-card">
-                <h3>پروژه تمرینی JavaScript</h3>
-                <p>پیاده‌سازی تعاملات کاربری و انیمیشن‌های ساده با JavaScript خالص</p>
-                <a href="#" target="_blank">مشاهده پروژه</a>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="blog">
-        <h2>وبلاگ</h2>
-        <p>
-            در این بخش مقالات و یادداشت‌های فنی منتشر خواهد شد.
-        </p>
-    </section>
+<section id="blog">
+    <h2>وبلاگ</h2>
+    <p>به‌زودی مقالات فنی منتشر می‌شود.</p>
+</section>
 
 </main>
 
 <footer>
-    <p>© 2026 - تمامی حقوق محفوظ است</p>
+    © 2026 - زکیه کمالی
 </footer>
 
 </body>
 </html>
+ر
