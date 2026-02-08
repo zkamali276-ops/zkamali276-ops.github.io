@@ -1,46 +1,96 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
 
     <!-- Google Search Console verification -->
-    <meta name="google-site-verification" content="gYVBV9z34209iETa1OmszPs_uu6Wsc4bQY_YTaxsjZo" />
+    <meta name="google-site-verification" content="gYVBV9z34209iETa1OmszPs_uu6Wsc4bQY_YTaxsjZo">
 
-    <title>سایت شخصی کمالی</title>
-    <meta name="description" content="سایت شخصی، رزومه و نمونه‌کار">
+    <title>زکیه کمالی | سایت شخصی و رزومه</title>
+    <meta name="description" content="سایت شخصی، رزومه، مهارت‌ها و نمونه‌کارهای زکیه کمالی">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Persian font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: Tahoma, Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background-color: #f4f6f8;
             margin: 0;
             direction: rtl;
+            line-height: 1.9;
         }
+
         header {
-            background: #222;
-            color: #fff;
-            padding: 20px;
-        }
-        nav a {
-            color: #fff;
-            margin-left: 15px;
-            text-decoration: none;
-        }
-        main {
-            padding: 30px;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        footer {
-            background: #222;
-            color: white;
+            background: linear-gradient(135deg, #1f2933, #111827);
+            color: #ffffff;
+            padding: 40px 20px;
             text-align: center;
-            padding: 15px;
+        }
+
+        header h1 {
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        ul {
+            padding-right: 20px;
+        }
+
+        footer {
+            background: #111827;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            main {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
@@ -48,46 +98,66 @@
 <body>
 
 <header>
-    <h1>سلام، من کمالی هستم 👋</h1>
+    <h1>سلام، من زکیه کمالی هستم 👋</h1>
     <nav>
-        <a href="#">خانه</a>
-        <a href="#">درباره من</a>
-        <a href="#">مهارت‌ها</a>
-        <a href="#">نمونه‌کار</a>
-        <a href="#">وبلاگ</a>
-        <a href="#">تماس</a>
+        <a href="#resume">رزومه</a>
+        <a href="#about">درباره من</a>
+        <a href="#skills">مهارت‌ها</a>
+        <a href="#portfolio">نمونه‌کار</a>
+        <a href="#blog">وبلاگ</a>
     </nav>
 </header>
 
 <main>
+
     <section id="resume">
-    <h2>رزومه</h2>
-    <p>
-        من یک فرد علاقه‌مند به فناوری و توسعه وب هستم که
-        به طراحی سایت‌های مدرن، بهینه و کاربرپسند علاقه دارم.
-    </p>
+        <h2>رزومه</h2>
+        <p>
+            من علاقه‌مند به فناوری و توسعه وب هستم و تمرکز من بر
+            ساخت وب‌سایت‌های مدرن، بهینه و کاربرپسند است.
+        </p>
 
-    <h3>حوزه‌های تخصصی</h3>
-    <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>طراحی سایت ریسپانسیو</li>
-        <li>Git و GitHub</li>
-    </ul>
-</section>
+        <h3>حوزه‌های تخصصی</h3>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Git & GitHub</li>
+            <li>SEO Basics</li>
+        </ul>
+    </section>
 
-    <section>
+    <section id="about">
         <h2>درباره من</h2>
         <p>
-            این سایت شخصی من برای معرفی، رزومه و نمونه‌کارهاست
+            این وب‌سایت به‌عنوان فضای شخصی من برای معرفی توانمندی‌ها،
+            اشتراک تجربه‌ها و ارائه نمونه‌کارها طراحی شده است.
         </p>
     </section>
 
-    <section>
-        <h2>هدف سایت</h2>
+    <section id="skills">
+        <h2>مهارت‌ها</h2>
+        <ul>
+            <li>HTML & CSS — Advanced</li>
+            <li>JavaScript — Intermediate</li>
+            <li>Git & GitHub — Intermediate</li>
+            <li>UI / UX Fundamentals</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>نمونه‌کار</h2>
         <p>
-            ساخت یک حضور حرفه‌ای آنلاین و قابل مشاهده در گوگل.
+            نمونه‌کارها به‌زودی اضافه خواهند شد.
         </p>
     </section>
+
+    <section id="blog">
+        <h2>وبلاگ</h2>
+        <p>
+            در این بخش مقالات و یادداشت‌های فنی منتشر خواهد شد.
+        </p>
+    </section>
+
 </main>
 
 <footer>
@@ -96,3 +166,4 @@
 
 </body>
 </html>
+```
