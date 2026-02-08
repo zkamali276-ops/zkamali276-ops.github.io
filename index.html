@@ -95,6 +95,45 @@
             width: 0;
         }
 
+        /* ===== Portfolio styles ===== */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-card h3 {
+            margin-top: 0;
+        }
+
+        .portfolio-card p {
+            color: #374151;
+        }
+
+        .portfolio-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .portfolio-card a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             background: #111827;
             color: #ffffff;
@@ -193,10 +232,29 @@
     </section>
 
     <section id="portfolio">
-        <h2>نمونه‌کار</h2>
-        <p>
-            نمونه‌کارها به‌زودی اضافه خواهند شد.
-        </p>
+        <h2>نمونه‌کارها</h2>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card">
+                <h3>سایت شخصی</h3>
+                <p>طراحی و پیاده‌سازی سایت شخصی با HTML و CSS و GitHub Pages</p>
+                <a href="https://zkamali276-ops.github.io/" target="_blank">مشاهده پروژه</a>
+            </div>
+
+            <div class="portfolio-card">
+                <h3>صفحه فرود (Landing Page)</h3>
+                <p>طراحی صفحه فرود واکنش‌گرا با تمرکز بر طراحی رابط کاربری و تجربه کاربری</p>
+                <a href="#" target="_blank">مشاهده پروژه</a>
+            </div>
+
+            <div class="portfolio-card">
+                <h3>پروژه تمرینی JavaScript</h3>
+                <p>پیاده‌سازی تعاملات کاربری و انیمیشن‌های ساده با JavaScript خالص</p>
+                <a href="#" target="_blank">مشاهده پروژه</a>
+            </div>
+
+        </div>
     </section>
 
     <section id="blog">
