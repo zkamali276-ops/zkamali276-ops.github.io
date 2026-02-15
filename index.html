@@ -2,22 +2,17 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Google Search Console verification -->
-    <meta name="google-site-verification" content="gYVBV9z34209iETa1OmszPs_uu6Wsc4bQY_YTaxsjZo">
-
     <title>زکیه کمالی | سایت شخصی و رزومه</title>
-    <meta name="description" content="سایت شخصی، رزومه، مهارت‌ها و نمونه‌کارهای زکیه کمالی">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ✅ SEO Advanced -->
+    <meta name="description" content="سایت شخصی و رزومه زکیه کمالی، توسعه‌دهنده فرانت‌اند و دانشجوی مهندسی کامپیوتر">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="author" content="زکیه کمالی">
     <meta name="language" content="fa">
 
-    <!-- ✅ Open Graph -->
+    <!-- Open Graph -->
     <meta property="og:title" content="زکیه کمالی | سایت شخصی و رزومه">
-    <meta property="og:description" content="رزومه، مهارت‌ها و نمونه‌کارهای زکیه کمالی – توسعه‌دهنده وب">
+    <meta property="og:description" content="رزومه، مهارت‌ها و نمونه‌کارهای زکیه کمالی – توسعه‌دهنده فرانت‌اند">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zkamali276-ops.github.io/">
     <meta property="og:site_name" content="Zakiyeh Kamali">
@@ -26,104 +21,144 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
             background-color: #f4f6f8;
-            margin: 0;
-            direction: rtl;
+            color: #111827;
             line-height: 1.9;
         }
 
-        header {
-            background: linear-gradient(135deg, #1f2933, #111827);
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #e5e7eb;
-            margin: 0 10px;
+        a {
+            color: #0ea5e9;
             text-decoration: none;
-            font-weight: 500;
         }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
-        section {
-            background: #ffffff;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        h2 {
+        h1, h2, h3 {
             margin-top: 0;
             font-weight: 700;
         }
 
-        /* ===== Timeline ===== */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #020617, #0f172a);
+            color: #ffffff;
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            opacity: 0.85;
+            margin: 20px 0 35px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn.primary {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+        .btn.primary:hover {
+            background: #0ea5e9;
+        }
+
+        .btn.secondary {
+            border: 2px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn.secondary:hover {
+            background: rgba(56,189,248,0.1);
+        }
+
+        /* Sections */
+        section {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Timeline */
         .timeline {
-            border-right: 3px solid #0ea5e9;
-            padding-right: 25px;
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            padding-right: 20px;
-        }
-
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            right: -10px;
-            top: 8px;
-            width: 14px;
-            height: 14px;
-            background: #0ea5e9;
-            border-radius: 50%;
+            border-right: 4px solid #38bdf8;
+            padding-right: 15px;
         }
 
         .timeline-date {
-            font-weight: 600;
-            color: #2563eb;
-            margin-bottom: 5px;
+            font-size: 14px;
+            opacity: 0.7;
         }
 
-        /* ===== Skills ===== */
+        /* Skills */
         .skill {
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .progress {
             background: #e5e7eb;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
+            height: 14px;
+            margin-top: 8px;
         }
 
         .progress-bar {
             background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-            color: #fff;
-            padding: 6px 10px;
-            font-size: 14px;
-            border-radius: 8px;
+            height: 100%;
+            color: #ffffff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 14px;
+            font-weight: 600;
         }
 
-        /* ===== Portfolio ===== */
+        /* Portfolio */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
@@ -131,38 +166,39 @@
             border: 1px solid #e5e7eb;
             border-radius: 12px;
             padding: 20px;
+            text-align: center;
             transition: 0.3s;
         }
 
         .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
+        /* Footer */
         footer {
             background: #111827;
-            color: #fff;
+            color: #ffffff;
             text-align: center;
             padding: 20px;
+            font-size: 14px;
         }
     </style>
 
-    <!-- ✅ Schema (Structured Data for SEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "زکیه کمالی",
       "url": "https://zkamali276-ops.github.io/",
-      "jobTitle": "توسعه‌دهنده وب",
-      "description": "دانشجوی مهندسی کامپیوتر و توسعه‌دهنده وب با تمرکز بر طراحی رابط کاربری و فرانت‌اند",
+      "jobTitle": "توسعه‌دهنده فرانت‌اند",
+      "description": "دانشجوی مهندسی کامپیوتر و توسعه‌دهنده فرانت‌اند با تمرکز بر طراحی رابط کاربری",
       "knowsAbout": [
         "HTML",
         "CSS",
         "JavaScript",
-        "GitHub Pages",
         "Responsive Design",
-        "UI Design"
+        "UI Design",
+        "GitHub Pages"
       ],
       "sameAs": [
         "https://github.com/zkamali276-ops"
@@ -170,41 +206,42 @@
     }
     </script>
 </head>
-
 <body>
 
-<header>
-    <h1>سلام، من زکیه کمالی هستم 👋</h1>
-    <nav>
-        <a href="#resume">رزومه</a>
-        <a href="#timeline">سوابق</a>
-        <a href="#skills">مهارت‌ها</a>
-        <a href="#portfolio">نمونه‌کار</a>
-        <a href="#blog">وبلاگ</a>
-    </nav>
+<header class="hero">
+    <h1>زکیه کمالی</h1>
+    <p class="hero-subtitle">
+        توسعه‌دهنده فرانت‌اند و دانشجوی مهندسی کامپیوتر <br>
+        علاقه‌مند به طراحی رابط‌های کاربری ساده، مدرن و کاربرپسند
+    </p>
+    <div class="hero-actions">
+        <a href="#portfolio" class="btn primary">نمونه‌کارها</a>
+        <a href="#skills" class="btn secondary">مهارت‌ها</a>
+    </div>
 </header>
 
 <main>
 
 <section id="resume">
-    <h2>رزومه</h2>
-    <p>دانشجوی مهندسی کامپیوتر و علاقه‌مند به توسعه وب و طراحی رابط کاربری. هدف من خلق تجربه‌های دیجیتال زیبا و کاربرپسند است.</p>
+    <h2>درباره من</h2>
+    <p>
+        دانشجوی مهندسی کامپیوتر و علاقه‌مند به توسعه وب و طراحی رابط کاربری.
+        هدف من ساخت وب‌سایت‌هایی ساده، تمیز و کاربرپسند است که تجربه کاربری خوبی ارائه دهند.
+    </p>
 </section>
 
 <section id="timeline">
-    <h2>سوابق تحصیلی و شغلی</h2>
-
+    <h2>سوابق تحصیلی و کاری</h2>
     <div class="timeline">
         <div class="timeline-item">
             <div class="timeline-date">۱۴۰۲ - تاکنون</div>
             <h3>توسعه‌دهنده وب (Freelance)</h3>
-            <p>طراحی و دیپلوی وب‌سایت‌های شخصی با HTML، CSS و GitHub Pages</p>
+            <p>طراحی و پیاده‌سازی سایت‌های شخصی با HTML، CSS و GitHub Pages</p>
         </div>
-
         <div class="timeline-item">
             <div class="timeline-date">۱۴۰۰ - تاکنون</div>
             <h3>دانشجوی مهندسی کامپیوتر</h3>
-            <p>دانشگاه (تهران) | تمرکز بر فرانت‌اند و طراحی وب</p>
+            <p>تمرکز بر فرانت‌اند و طراحی رابط کاربری</p>
         </div>
     </div>
 </section>
@@ -214,41 +251,56 @@
 
     <div class="skill">
         HTML / CSS
-        <div class="progress"><div class="progress-bar" style="width:90%">90%</div></div>
+        <div class="progress">
+            <div class="progress-bar" style="width:90%">90%</div>
+        </div>
     </div>
 
     <div class="skill">
         JavaScript
-        <div class="progress"><div class="progress-bar" style="width:65%">65%</div></div>
+        <div class="progress">
+            <div class="progress-bar" style="width:65%">65%</div>
+        </div>
     </div>
 
     <div class="skill">
         طراحی واکنش‌گرا (Responsive)
-        <div class="progress"><div class="progress-bar" style="width:80%">80%</div></div>
+        <div class="progress">
+            <div class="progress-bar" style="width:80%">80%</div>
+        </div>
     </div>
 </section>
 
 <section id="portfolio">
     <h2>نمونه‌کارها</h2>
-
     <div class="portfolio-grid">
         <div class="portfolio-card">
-            <h3>سایت شخصی من</h3>
-            <a href="https://zkamali276-ops.github.io/" target="_blank">مشاهده</a>
+            <h3>سایت شخصی</h3>
+            <p>رزومه و معرفی شخصی</p>
+            <a href="https://zkamali276-ops.github.io/" target="_blank">مشاهده پروژه</a>
         </div>
     </div>
 </section>
 
-<section id="blog">
-    <h2>وبلاگ</h2>
-    <p>به‌زودی مقالات فنی منتشر می‌شود — درباره توسعه وب، طراحی و تجربه کاربری.</p>
+<section id="contact">
+    <h2>تماس با من</h2>
+    <p>برای همکاری، پیشنهاد پروژه یا ارتباط حرفه‌ای:</p>
+    <p>
+        📧 ایمیل:
+        <a href="mailto:your@email.com">your@email.com</a><br>
+        🐙 GitHub:
+        <a href="https://github.com/zkamali276-ops" target="_blank">
+            github.com/zkamali276-ops
+        </a>
+    </p>
 </section>
 
 </main>
 
 <footer>
-    © 2026 - زکیه کمالی | تمام حقوق محفوظ است
+    © 2026 - زکیه کمالی | تم حقوق محفوظ است
 </footer>
 
 </body>
 </html>
+`
