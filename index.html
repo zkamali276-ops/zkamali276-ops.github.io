@@ -1,382 +1,106 @@
+<!-- contact.html -->
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="fa" dir="rtl" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <title>Zakieh Kamali | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-
-<header class="header">
-  <nav class="nav">
-    <a href="./index.html">Home</a>
-    <a href="./blog.html">Blog</a>
-    <a href="./contact.html">Contact</a>
-  </nav>
-  <button class="theme-btn" onclick="toggleTheme()">🌙</button>
-</header>
-
-<main class="container">
-
-  <section class="card profile">
-    <div class="avatar">ZK</div>
-    <div>
-      <h1>Zakieh Kamali</h1>
-      <p>Front-End Developer</p>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Skills</h2>
-
-    <div class="skills">
-      <div class="skill">
-        HTML
-        <div class="progress"><div style="width:90%"></div></div>
-      </div>
-
-      <div class="skill">
-        CSS
-        <div class="progress"><div style="width:85%"></div></div>
-      </div>
-
-      <div class="skill">
-        JavaScript
-        <div class="progress"><div style="width:70%"></div></div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  © 2026 Zakieh Kamali
-</footer>
-
-<script src="./js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <title>Zakieh Kamali | Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-
-<header class="header">
-  <nav class="nav">
-    <a href="./index.html">Home</a>
-    <a href="./blog.html">Blog</a>
-    <a href="./contact.html">Contact</a>
-  </nav>
-</header>
-
-<main class="container">
-  <section class="card">
-    <h2>Blog</h2>
-    <p>Posts will be added soon.</p>
-  </section>
-</main>
-
-<footer class="footer">
-  © 2026 Zakieh Kamali
-</footer>
-
-<script src="./js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Zakieh Kamali | Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="header">
-  <nav class="nav">
-    <a href="./index.html">Home</a>
-    <a href="./blog.html">Blog</a>
-    <a href="./contact.html">Contact</a>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
+  <div class="actions">
+    <button onclick="toggleTheme()">🌙</button>
+    <button onclick="setLang('fa')">FA</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
 </header>
 
-<main class="container">
-
-  <section class="card">
-    <h2>Contact</h2>
+<main>
+  <section>
+    <h2 data-fa="راه‌های ارتباطی" data-en="Get in Touch"></h2>
 
     <div class="contact-grid">
-      <button class="contact-card" onclick="showEmail()">Show Email</button>
-      <button class="contact-card" onclick="copyEmail()">Copy Email</button>
 
-      <a class="contact-card" href="https://instagram.com/YOUR_USERNAME" target="_blank">
-        Instagram
+      <!-- Email (Secure) -->
+      <button class="contact-card" onclick="revealEmail()">
+        📧
+        <span data-fa="نمایش ایمیل" data-en="Show Email"></span>
+      </button>
+
+      <!-- Instagram -->
+      <a class="contact-card"
+         href="https://instagram.com/USERNAME"
+         target="_blank" rel="noopener">
+        📸 Instagram
       </a>
 
-      <a class="contact-card" href="https://github.com/YOUR_USERNAME" target="_blank">
-        GitHub
+      <!-- GitHub -->
+      <a class="contact-card"
+         href="https://github.com/USERNAME"
+         target="_blank" rel="noopener">
+        💻 GitHub
       </a>
+
     </div>
 
-    <p id="emailOutput" class="email-output"></p>
-
-    <form class="contact-form"
-          action="https://formspree.io/f/XXXXXXXX"
-          method="POST">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-
+    <p id="emailBox" class="email-box"></p>
   </section>
-
 </main>
 
-<footer class="footer">
-  © 2026 Zakieh Kamali
-</footer>
+<footer>© 2026 Zakieh Kamali</footer>
 
-<script src="./js/main.js"></script>
+<script src="js/main.js"></script>
+<script>setLang('fa')</script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Zakieh Kamali | Links</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body class="bio-page">
-
-<main class="bio-box">
-  <div class="avatar big">ZK</div>
-  <h1>Zakieh Kamali</h1>
-  <p>Front-End Developer</p>
-
-  <a class="bio-link" href="./index.html">Website</a>
-  <a class="bio-link" href="https://github.com/YOUR_USERNAME">GitHub</a>
-  <a class="bio-link" href="https://instagram.com/YOUR_USERNAME">Instagram</a>
-  <a class="bio-link" href="./contact.html">Contact</a>
-</main>
-
-</body>
-</html>
-:root{
-  --bg:#f9eeee;
-  --card:#ffffff;
-  --text:#1f2937;
-  --primary:#b4536b;
-  --accent:#fde8ec;
-}
-
-[data-theme="dark"]{
-  --bg:#0f172a;
-  --card:#020617;
-  --text:#e5e7eb;
-  --primary:#f472b6;
-  --accent:#1e293b;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-body{
-  margin:0;
-  font-family:Tahoma, Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  background:var(--card);
-}
-
-.nav a{
-  margin-right:15px;
-  text-decoration:none;
-  color:var(--text);
-  font-weight:600;
-}
-
-.theme-btn{
-  border:none;
-  background:var(--accent);
-  padding:8px 12px;
-  border-radius:10px;
-  cursor:pointer;
-}
-
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:30px 20px;
-}
-
-.card{
-  background:var(--card);
-  padding:25px;
-  border-radius:18px;
-  margin-bottom:25px;
-}
-
-.profile{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.avatar{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  background:var(--primary);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-  font-weight:800;
-}
-
-.avatar.big{
-  width:120px;
-  height:120px;
-}
-
-.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;
-}
-
-.skill{
-  background:var(--accent);
-  padding:15px;
-  border-radius:14px;
-}
-
-.progress{
-  height:6px;
-  background:#ddd;
-  border-radius:10px;
-  margin-top:8px;
-}
-
-.progress div{
-  height:100%;
-  background:var(--primary);
-}
-
 .contact-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:14px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
   margin-top:20px;
 }
 
 .contact-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
   padding:16px;
   border-radius:18px;
   background:var(--accent);
-  text-align:center;
-  text-decoration:none;
   color:var(--text);
-  border:none;
   font-weight:600;
+  text-decoration:none;
+  border:none;
   cursor:pointer;
+  font-size:16px;
+  transition:.25s;
 }
 
-.contact-form{
-  margin-top:25px;
-  display:grid;
-  gap:10px;
-}
-
-.contact-form input,
-.contact-form textarea{
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
-.contact-form button{
-  padding:12px;
-  border:none;
-  border-radius:12px;
+.contact-card:hover{
+  transform:translateY(-3px);
   background:var(--primary);
-  color:white;
-  font-weight:600;
+  color:#fff;
 }
 
-.email-output{
-  margin-top:15px;
-  font-weight:600;
-}
-
-.footer{
+.email-box{
+  margin-top:18px;
   text-align:center;
-  padding:20px;
-  opacity:.6;
+  font-weight:600;
+  letter-spacing:.5px;
 }
+function revealEmail(){
+  const user = "yourname";
+  const domain = "gmail.com";
+  const email = user + "@" + domain;
 
-.bio-page{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-}
-
-.bio-box{
-  text-align:center;
-}
-
-.bio-link{
-  display:block;
-  margin:10px 0;
-  padding:14px;
-  background:var(--accent);
-  border-radius:18px;
-  text-decoration:none;
-  color:var(--text);
-}
-function toggleTheme(){
-  const root = document.documentElement;
-  const current = root.getAttribute("data-theme");
-  const next = current === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-}
-
-const savedTheme = localStorage.getItem("theme");
-if(savedTheme){
-  document.documentElement.setAttribute("data-theme", savedTheme);
-}
-
-const emailUser = "zakieh.kamali";
-const emailDomain = "gmail.com";
-const email = emailUser + "@" + emailDomain;
-
-function showEmail(){
-  document.getElementById("emailOutput").innerHTML =
-    `<a href="mailto:${email}">${email}</a>`;
-}
-
-function copyEmail(){
-  navigator.clipboard.writeText(email);
-  document.getElementById("emailOutput").textContent =
-    "Email copied successfully";
+  const box = document.getElementById("emailBox");
+  box.innerHTML = `<a href="mailto:${email}">${email}</a>`;
 }
