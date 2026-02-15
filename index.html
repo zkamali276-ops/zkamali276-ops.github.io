@@ -1,13 +1,12 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Zakieh Kamali | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal website of Zakieh Kamali, Front-End Developer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -19,8 +18,6 @@
   </nav>
   <div class="actions">
     <button onclick="toggleTheme()">🌙</button>
-    <button onclick="setLang('fa')">FA</button>
-    <button onclick="setLang('en')">EN</button>
   </div>
 </header>
 
@@ -28,13 +25,13 @@
   <section class="profile">
     <div class="avatar">ZK</div>
     <div>
-      <h1 data-fa="زکیه کمالی" data-en="Zakieh Kamali"></h1>
-      <p data-fa="توسعه‌دهنده فرانت‌اند" data-en="Front-End Developer"></p>
+      <h1>Zakieh Kamali</h1>
+      <p>Front-End Developer</p>
     </div>
   </section>
 
   <section>
-    <h2 data-fa="مهارت‌ها" data-en="Skills"></h2>
+    <h2>Skills</h2>
     <div class="skills">
       <div class="skill">HTML<div class="progress"><div style="width:90%"></div></div></div>
       <div class="skill">CSS<div class="progress"><div style="width:85%"></div></div></div>
@@ -46,17 +43,16 @@
 <footer>© 2026 Zakieh Kamali</footer>
 
 <script src="js/main.js"></script>
-<script>setLang('fa')</script>
 </body>
 </html>
 <!-- blog.html -->
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Zakieh Kamali | Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -66,20 +62,15 @@
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <div class="actions">
-    <button onclick="toggleTheme()">🌙</button>
-    <button onclick="setLang('fa')">FA</button>
-    <button onclick="setLang('en')">EN</button>
-  </div>
 </header>
 
 <main>
   <section>
-    <h2 data-fa="بلاگ" data-en="Blog"></h2>
+    <h2>Blog</h2>
     <div class="cards">
       <div class="card">
-        <h3 data-fa="اولین پست بلاگ" data-en="First Blog Post"></h3>
-        <p data-fa="به‌زودی..." data-en="Coming soon..."></p>
+        <h3>First Blog Post</h3>
+        <p>Coming soon...</p>
       </div>
     </div>
   </section>
@@ -88,17 +79,16 @@
 <footer>© 2026 Zakieh Kamali</footer>
 
 <script src="js/main.js"></script>
-<script>setLang('fa')</script>
 </body>
 </html>
 <!-- contact.html -->
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Zakieh Kamali | Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -108,28 +98,76 @@
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <div class="actions">
-    <button onclick="toggleTheme()">🌙</button>
-    <button onclick="setLang('fa')">FA</button>
-    <button onclick="setLang('en')">EN</button>
-  </div>
 </header>
 
 <main>
-  <section>
-    <h2 data-fa="تماس با من" data-en="Contact Me"></h2>
-    <div class="contact">
-      <a href="mailto:your@email.com">Email</a>
-      <a href="https://github.com/username">GitHub</a>
-      <a href="https://instagram.com/username">Instagram</a>
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+
+    <div class="contact-grid">
+
+      <button class="contact-card" onclick="showEmail()">
+        <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2z"/><path d="M22 4L12 13 2 4"/></svg>
+        Show Email
+      </button>
+
+      <button class="contact-card" onclick="copyEmail()">
+        <svg viewBox="0 0 24 24"><path d="M16 1H4v14h12z"/><path d="M20 5H8v18h12z"/></svg>
+        Copy Email
+      </button>
+
+      <a class="contact-card" href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/><circle cx="12" cy="12" r="3"/></svg>
+        Instagram
+      </a>
+
+      <a class="contact-card" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 1C5.9 1 1 5.9 1 12c0 4.9 3.2 9 7.6 10.5.6.1.8-.3.8-.6v-2c-3.1.7-3.8-1.5-3.8-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5-.8 1.5-.8"/></svg>
+        GitHub
+      </a>
+
     </div>
+
+    <p id="emailOutput" class="email-output"></p>
+
+    <!-- Formspree -->
+    <form action="https://formspree.io/f/XXXXXXXX" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
   </section>
 </main>
 
 <footer>© 2026 Zakieh Kamali</footer>
 
 <script src="js/main.js"></script>
-<script>setLang('fa')</script>
+</body>
+</html>
+<!-- bio.html (Instagram Bio Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zakieh Kamali | Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bio">
+
+<main class="bio-box">
+  <div class="avatar large">ZK</div>
+  <h1>Zakieh Kamali</h1>
+  <p>Front-End Developer</p>
+
+  <a href="index.html" class="bio-link">Website</a>
+  <a href="https://github.com/YOUR_USERNAME" class="bio-link">GitHub</a>
+  <a href="https://instagram.com/YOUR_USERNAME" class="bio-link">Instagram</a>
+  <a href="contact.html" class="bio-link">Contact</a>
+</main>
+
 </body>
 </html>
 /* css/style.css */
@@ -156,7 +194,6 @@ body{
   font-family:'Vazirmatn',Tahoma;
   background:var(--bg);
   color:var(--text);
-  transition:.3s;
 }
 
 header{
@@ -164,17 +201,12 @@ header{
   padding:15px 25px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
 
 nav a{
   margin:0 10px;
   text-decoration:none;
   color:var(--text);
-}
-
-.actions button{
-  margin-left:6px;
 }
 
 main{
@@ -234,32 +266,74 @@ section{
   background:var(--primary);
 }
 
-.cards{
+.contact-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+  margin-top:20px;
 }
 
-.card{
-  border:1px solid #eee;
-  padding:18px;
-  border-radius:14px;
+.contact-card{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  background:var(--accent);
+  border:none;
+  border-radius:20px;
+  padding:16px;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  color:var(--text);
 }
 
-.contact a{
-  display:inline-block;
-  margin:8px;
-  padding:10px 18px;
+.contact-card svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+}
+
+.contact-form{
+  display:grid;
+  gap:10px;
+  margin-top:30px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+.contact-form button{
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:var(--primary);
+  color:#fff;
+}
+
+.bio{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.bio-box{
+  text-align:center;
+}
+
+.bio-link{
+  display:block;
+  margin:10px 0;
+  padding:14px;
   background:var(--accent);
   border-radius:20px;
   text-decoration:none;
-}
-
-footer{
-  background:#9f1239;
-  color:#fff;
-  text-align:center;
-  padding:20px;
+  color:var(--text);
 }
 // js/main.js
 function toggleTheme(){
@@ -273,8 +347,16 @@ if(localStorage.getItem("theme")){
   document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
 }
 
-function setLang(lang){
-  document.querySelectorAll("[data-fa]").forEach(el=>{
-    el.textContent = lang === "fa" ? el.dataset.fa : el.dataset.en;
-  });
+const emailUser = "zakieh.kamali";
+const emailDomain = "gmail.com";
+const email = `${emailUser}@${emailDomain}`;
+
+function showEmail(){
+  document.getElementById("emailOutput").innerHTML =
+    `<a href="mailto:${email}">${email}</a>`;
+}
+
+function copyEmail(){
+  navigator.clipboard.writeText(email);
+  document.getElementById("emailOutput").textContent = "Email copied";
 }
